@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow:  0 100px 200px #969595;
+            width: 500px;
+            border-radius: 5px;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            
+        }
+
+        body{
+            background-color: red;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+        h1{
+            text-align: center;
+            color: #000000;
+            font-weight: bolder;
+            font-style: italic;
+        }
+        form{
+            border: 1px solid white;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            
+        }
+        label{
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        button{
+            background-color: #00ff00;
+            border-radius: 5px;
+            border: none;
+            font-size: medium;
+            padding: 10px 20px;
+            cursor: pointer;
+            color: white;
+        }
+        #ratingradio {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        #ratingradio div {
+            display: flex;
+            align-items: baseline;
+            margin: 0 10px;
+        }
+        input, select,textarea{
+            width: 100%;
+            border: 1px solid #cccccc;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        textarea{
+            height: 100px;
+        }
+        #subButton{
+            display: flex;
+            justify-content: center;
+        }
+        .checkboxTerms {
+            display:block;
+            max-width: 800px;
+        }
+        .checkboxTerms input[type="checkbox"] {
+            margin-right: 5px;
+            width: 3%;
+            vertical-align: middle;
+        }
+        .redstar{
+            color: red;
+        }
+        form label[for="rating"]{
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <h1>Feedback Form</h1>
+        <div class="form-container">
+        <form action="#">
+            <label for="feedback-type" id="type-feedback" >Feedback Type:</label>
+            <select name="feedback-type" id="feedback-type" required>
+                <option value="">Select...</option>
+                <option value="general">General Feedback</option>
+                <option value="bug">Bug Report</option>
+                <option value="suggestion">Suggestion</option>
+            </select>
+            <br><br>
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" rows="4" cols="50" required></textarea>
+            <br><br>
+            <label for="rating">Website Rating:</label>
+            <div id="ratingradio">
+            <div>
+                <input type="radio" id="rating1" name="rating" value="1" required>
+                <label for="rating1">Excellent</label>
+            </div>
+            <div>
+                <input type="radio" id="rating2" name="rating" value="2" required>
+                <label for="rating2">Good</label>
+            </div>
+            <div>
+                <input type="radio" id="rating3" name="rating" value="3" required>
+                <label for="rating3">Average</label>
+            </div>
+            <div>
+                <input type="radio" id="rating4" name="rating" value="4" required>
+                <label for="rating4">Poor</label>
+            </div>
+        </div>
+            <br>
+            <label for="age">Age (10-100):</label>
+            <input type="number" id="age" name="age" min="10" max="100" required>
+            <br><br>
+            <label for="email">Email<span class="redstar">*</span>:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <label for="password">Password (min 8 characters):</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+            <br><br>
+            <label for="website">Website URL (optional):</label>
+            <input type="wrl" name="website" id="website">
+            <br><br>
+            <div class="checkboxTerms">
+                <input type="checkbox" id="terms" name="terms" required />
+                <label for="term">I agree to the terms and conditions</label>
+            </div>
+            <br><br>
+            <div id="subButton">
+            <button type="submit">Submit</button>
+        </div>
+        </form>
+    </div>
+</body>
+</html>
