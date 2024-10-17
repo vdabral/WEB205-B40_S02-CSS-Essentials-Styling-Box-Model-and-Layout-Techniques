@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+    <style>
+    .card{
+        border: 1px solid rgb(132, 126, 126);
+        padding: 20px;
+        width: 400px;
+        margin: 0 auto;
+        border-radius: 5px;
+    }
+    .title{
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    .title h1{
+        font-size: 40px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .title h3{
+        font-size: 25px;
+        font-family: "Akaya Kanadaka", system-ui;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .image{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .image img{
+        width: 200px;
+        border-radius: 50%;
+    }
+    .content{
+        text-align: center;
+    }
+    .content h3{
+        color: yellowgreen;
+    }
+    .content :nth-child(2){
+        color: gray;
+    }
+    .content :nth-child(3){
+        color: gray;
+    }
+    .rating {
+        unicode-bidi: bidi-override;
+        direction: rtl;
+        text-align: center;
+    }
+    .rating > span {
+        display: inline-block;
+        position: relative;
+        width: 1.1em;
+    }
+    .rating > span:hover:before,
+    .rating > span:hover ~ span:before {
+        content: "\2605";
+        position: absolute;
+        color: gold;
+    }
+
+    
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="title">
+            <h1>Title</h1>
+            <h3>Panda Card</h3>
+        </div>
+        <div class="image">
+            <img src="https://t4.ftcdn.net/jpg/05/54/52/13/360_F_554521329_ngmDQSjSrUSRnbK2xK0bkcprsinG9Xdv.jpg" alt="panda-image">
+        </div>
+        <div class="content"> 
+            <h3>John Doe</h3>
+            <p>Computer Science 1</p>
+            <p>Computer Science 2</p>
+            <p>Year: 3</p>
+        </div>
+        <div class="rating">
+            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+            </div>
+
+    </div>
+    
+</body>
+</html>
